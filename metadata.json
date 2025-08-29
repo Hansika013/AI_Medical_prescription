@@ -1,0 +1,5 @@
+{
+  "name": "AI Medical Prescription Verifier",
+  "description": "An AI-powered tool to analyze medical prescriptions. It identifies prescribed drugs, checks for potential interactions, provides age and weight-based dosage recommendations, and suggests safer alternatives using the Gemini API.",
+  "requestFramePermissions": []
+}
