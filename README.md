@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# AI Medical Prescription Verifier - FastAPI Backend (Demo)
 
-# Run and deploy your AI Studio app
+This is a demo backend written in **Python (FastAPI)**. It provides endpoints to:
+- analyze prescriptions (drug extraction, interaction checks, dosing suggestions, alternatives)
+- check interactions
+- list alternatives
 
-This contains everything you need to run your app locally.
+**Important:** This is an educational demo — NOT a medical device. Replace the simple rules and KB with validated clinical sources for production.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1aBj9DNXXaXvUz7TnJ3NRUuPwURhGnd6a
+## Quick start
 
-## Run Locally
+1. Copy `.env.example` -> `.env` and fill your API keys (Hugging Face, IBM Granite / watsonx if used).
+2. Create and activate venv:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # on Windows: venv\Scripts\activate
+   ```
+3. Install:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run:
+   ```bash
+   uvicorn app.main:app --reload --port 5050
+   ```
 
-**Prerequisites:**  Node.js
+## Endpoints
 
+POST /api/analyze
+POST /api/interactions
+POST /api/alternatives
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+See app/README.md for more details.
